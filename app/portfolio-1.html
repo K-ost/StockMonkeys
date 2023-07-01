@@ -1,0 +1,44 @@
+@@include('inc/head.html', { "title": "Portfolio - Account Summary Popup" })
+
+<div class="mainbody nofooter">
+	@@include('inc/header.html', { "title": "סיכום חשבון", "back": "portfolio.html" })
+	<div class="mainbody-content">
+		
+		<div class="wrapper">
+
+      <div class="row margin_bottom0">
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "סהכ עסקאות", "val": "23" })
+        </div><!-- /grid -->
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "השווי שלך", "val": "14,489.02$" })
+        </div><!-- /grid -->
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "רווח / הפסד", "val": "1,934.44$", "sm": "16.24%", "color": "green" })
+        </div><!-- /grid -->
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "רווח / הפסד יומי", "val": "-194.44$", "sm": "-1.36%", "color": "red" })
+        </div><!-- /grid -->
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "סיכוי סיכון", "val": "42.5%" })
+        </div><!-- /grid -->
+        <div class="grid6">
+          @@include('inc/infoblock.html', { "title": "שיעור הצלחות", "val": "62.5%" })
+        </div><!-- /grid -->
+      </div><!-- /row -->
+
+      @@include('inc/input.html', { "sign": "$" })
+
+      <div class="margin_bottom">התאמת מטבע לש"ח</div>
+      <div class="margin_bottom3">
+        @@include('inc/switcher.html')
+      </div>
+
+      <button class="btn btn-block btn-yellow">אישור</button>
+
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')

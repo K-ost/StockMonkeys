@@ -1,0 +1,76 @@
+@@include('inc/head.html', { "title": "Search" })
+
+<div class="mainbody nofooter">
+	
+  <div class="fixheader search_header">
+    <button class="btn_icon btn_icon-search"></button>
+    <input type="text" class="search_header-input" placeholder="חפש נייר לפי שם או סמל">
+    <a href="overview.html" class="btn_icon btn_icon-back"></a>
+  </div>
+
+  <div class="mainbody-content">
+
+    <div class="recent-searches">חיפושים אחרונים</div>
+
+    <div class="search_item-list">
+      @@loop('inc/search-item.html', [
+        {
+          "indicator": "green",
+          "color": "red",
+          "title": "אלוני חץ",
+          "icon": "star_yellow",
+          "val": "-3.94%"
+        },
+        {
+          "indicator": "red",
+          "color": "green",
+          "title": "Inc Ebay",
+          "icon": "heart",
+          "val": "1.33%"
+        },
+        {
+          "indicator": "yellow",
+          "color": "red",
+          "title": "Teva Pharmaceutical",
+          "icon": "heart",
+          "val": "-3.94%"
+        }
+      ])
+    </div><!-- /search_item-list -->
+
+    <div class="recent-searches">רשימת מעקב</div>
+
+    <div class="search_item-list">
+      @@loop('inc/search-item.html', [
+        {
+          "indicator": "green",
+          "color": "red",
+          "title": "אלוני חץ",
+          "icon": "star_yellow",
+          "val": "-3.94%"
+        },
+        {
+          "indicator": "red",
+          "color": "green",
+          "title": "Inc Ebay",
+          "icon": "heart",
+          "val": "1.33%"
+        },
+        {
+          "indicator": "yellow",
+          "color": "red",
+          "title": "Teva Pharmaceutical",
+          "icon": "heart",
+          "val": "-3.94%"
+        }
+      ])
+    </div><!-- /search_item-list -->
+
+    <div class="wrapper">
+			@@include('inc/module-banner.html')
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')

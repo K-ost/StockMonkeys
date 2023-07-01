@@ -1,0 +1,9 @@
+<div class="form-line">
+  <div class="form-field @@if(context.error){error}">
+    <input type="text" class="form-control" @@if(context.error){value="3030"} required>
+    <span class="form-label">שם משפחה</span>
+    @@if(context.eye){<button class="btn_icon btn_icon-eye"></button>}  
+    @@if(context.sign){<div class="form-field-sign">@@sign</div>}  
+  </div>
+  @@if(context.error){<div class="form-field-text">הימנע משימוש במספרים</div>}
+</div><!-- /form-line -->

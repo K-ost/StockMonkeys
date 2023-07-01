@@ -1,0 +1,29 @@
+<div class="module">
+  <div class="module-header">
+    @@if(context.info){<button class="btn_icon btn_icon-info"></button>}
+    <div class="module-title">
+      @@title
+      @@if(context.long){<span class="module-title-tag">קניה LONG</span>}
+    </div>
+  </div>
+  <div class="module-content">
+    @@if(context.list1){
+      @@include('list1.html')
+    }
+    @@if(context.list2){
+      @@include('list2.html')
+    }
+    @@if(context.list3){
+      @@include('list3.html')
+    }
+    @@if(context.slider){
+      @@include('list4.html')
+    }
+    @@if(context.list5){
+      @@include('list5.html')
+    }
+  </div>
+  @@if(context.footer){<div class="module-footer">
+    <button class="btn btn-block btn-sm btn-yellow">הצג עוד</button>
+  </div>}
+</div><!-- /module -->

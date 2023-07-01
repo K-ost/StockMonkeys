@@ -1,0 +1,40 @@
+@@include('inc/head.html', { "title": "Alerts" })
+
+<div class="mainbody">
+	
+  @@include('inc/timehead.html')
+
+  <div class="mainbody-content nopad_top">
+
+    @@include('inc/segments.html')
+    
+    <div class="wrapper">
+      <h3>Alert will be here soon...</h3>
+    </div>
+
+    <div class="search_item-list">
+
+      @@loop('inc/search-item.html', [
+        {
+          "indicator": "green",
+          "color": "red",
+          "title": "אלוני חץ",
+          "icon": "star_yellow",
+          "val": "-3.94%"
+        }
+      ])
+    </div><!-- /search_item-list -->
+
+    <div class="wrapper">
+			@@include('inc/module-banner.html')
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "alerts": true })
+</div><!-- /mainbody -->
+
+<div class="fix_buttons">
+  <a href="edit-alerts.html" class="btn_fix btn_fix-pen"></a>
+</div><!-- /fix_buttons -->
+
+@@include('inc/footer.html')

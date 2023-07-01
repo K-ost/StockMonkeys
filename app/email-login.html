@@ -1,0 +1,27 @@
+@@include('inc/head.html', { "title": "E-mail login" })
+
+<div class="mainbody nofooter">
+  @@include('inc/header.html', { "title": "כותרת אופציאונלית", "back": "intro.html" })
+	<div class="mainbody-content pad">
+
+		<div class="wrapper">
+      <div class="image_circle">
+        <img src="images/svg/monkey-happy.svg" alt="">
+      </div>
+      <div class="form-line text-center">
+        <div class="h3">כותרת ראשית</div>
+        <p>פסקה קצרה שעוזרת למשתמש להבין למה אנחנו רוצים את כתובת הדואר האלקטרונית והטלפון שלו</p>
+      </div>
+
+      @@include('inc/input.html')
+      @@include('inc/input.html')
+      <div class="form-line">
+        <button class="btn btn-yellow btn-block">בוא נתחיל</button>
+      </div>
+      
+    </div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')

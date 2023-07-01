@@ -1,0 +1,42 @@
+@@include('inc/head.html', { "title": "Portfolio" })
+
+<div class="mainbody">
+	@@include('inc/timehead.html')
+	<div class="mainbody-content nopad_top">
+		
+		@@include('inc/segments.html')
+
+		<div class="wrapper">
+
+			@@include('inc/module.html', { "title": "סיכום חשבון", "list5": true, "footer": true })
+
+		</div><!-- /wrapper -->
+
+		<hr>
+
+		<div class="wrapper margin_bottom">
+			@@include('inc/tabs.html')
+		</div>
+		
+		@@include('inc/tabs-swiper.html')
+
+		<div class="wrapper">
+
+			@@loop('inc/watchitem.html', [
+				{ "title": "יפן נייקי", "noicon": true, "footer": true, "route": "portfolio-1.html" },
+				{ "title": "יפן נייקי", "noicon": true, "footer": true, "route": "portfolio-1.html" },
+				{ "title": "יפן נייקי", "noicon": true, "footer": true, "route": "portfolio-1.html" },
+				{ "title": "יפן נייקי", "noicon": true, "footer": true, "route": "portfolio-1.html" }
+			])
+
+			@@include('inc/module-banner.html')
+
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "portfolio": true })
+</div><!-- /mainbody -->
+
+@@include('inc/fixbtns.html')
+
+@@include('inc/footer.html', { "page": "portfolio" })

@@ -1,0 +1,33 @@
+@@include('inc/head.html', { "title": "Watchlist" })
+
+<div class="mainbody">
+	@@include('inc/timehead.html')
+	<div class="mainbody-content nopad_top">
+		
+		@@include('inc/segments.html')
+
+		<div class="wrapper margin_bottom">
+			@@include('inc/tabs.html')
+		</div><!-- /wrapper -->
+
+		<div class="wrapper">
+
+			@@loop('inc/watchitem.html', [
+				{ "title": "יפן נייקי", "ind": "green" },
+				{ "title": "אס אנד פי 500", "ind": "yellow" },
+				{ "title": "יפן נייקי", "ind": "red" },
+				{ "title": "יפן נייקי", "ind": "green" },
+				{ "title": "יפן נייקי", "ind": "green" }
+			])
+
+			@@include('inc/module-banner.html')
+
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "watch": true })
+</div><!-- /mainbody -->
+
+@@include('inc/fixbtns.html')
+
+@@include('inc/footer.html')

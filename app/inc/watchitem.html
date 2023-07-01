@@ -1,0 +1,28 @@
+<div class="module">
+  @@if(context.route){<a href="@@route" class="module-route"></a>}
+  <div class="module-header">
+    @@if(!context.noicon){<button class="btn_icon btn_icon-star"></button>}
+    <div class="module-title">
+      @@if(context.ind){<span class="module-indicator @@ind"></span>}
+      <span>@@title</span>
+    </div>
+  </div>
+  <div class="module-content">
+    <div class="module-numbers">
+      <div>28,139</div>
+      <div class="color-green">2.36%</div>
+      <span class="caret-up"></span>
+    </div>
+    <img src="images/uploads/chart2.webp" alt="" style="display: block; width: 100%;">
+  </div>
+  @@if(context.footer){<div class="module-footer">
+    <div>
+      <em>שווי</em>
+      <span>8,230</span>
+    </div>
+    <div>
+      <em>תשואה</em>
+      <span>39.95%</span>
+    </div>
+  </div>}
+</div><!-- /module -->

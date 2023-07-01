@@ -1,0 +1,25 @@
+
+@mixin clr {
+	&:after {content: ''; clear: both; display: block;}
+}
+@mixin bf {content: ''; position: absolute; display: block;}
+
+@mixin inp {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+	outline: none;
+}
+@mixin icon($name,$width,$height) {
+	background-image: url('../images/svg/'+$name+'.svg'); background-repeat: no-repeat;
+	background-position: center center; background-size: cover;
+	display: inline-block; vertical-align: middle;
+	width: $width; height: $height;
+}
+@mixin clamp($num) {
+	display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+

@@ -1,0 +1,50 @@
+@@include('inc/head.html', { "title": "Overview" })
+
+<div class="mainbody">
+	@@include('inc/timehead.html')
+	<div class="mainbody-content">
+
+		<div class="wrapper">
+
+			@@include('inc/sum.html', { "btns": true })
+
+			<div class="module">
+				<div class="module-header">
+					@@include('inc/tabs.html')
+				</div>
+				<div class="module-content">
+					<img src="images/uploads/chart1.webp" alt="" style="display: block; width: 100%;">
+				</div>
+			</div><!-- /module -->
+
+			@@include('inc/module.html', { "title": "גרף שבועי", "info": true, "list3": true, "long": true })
+			@@include('inc/module.html', { "title": "סיכוי - סיכון", "info": true, "list2": true })
+
+			<div class="row">
+				<div class="grid6">
+					@@include('inc/module.html', { "title": "מגמה", "info": true, "list1": true })
+				</div><!-- /grid6 -->
+
+				<div class="grid6">
+					@@include('inc/module.html', { "title": "רצפים", "info": true, "list1": true })
+				</div><!-- /grid6 -->
+			</div><!-- /row -->
+
+			@@include('inc/module.html', { "title": "פיננסי", "slider": true })
+			@@include('inc/module.html', { "title": "סיכום יומי", "list1": true })
+
+		
+			@@include('inc/module-banner.html')
+		</div><!-- /wrapper -->
+
+		<div class="loadmore">
+			<button class="btn_icon btn_icon-load loadmore-btn"></button>
+		</div><!-- /loadmore -->
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "main": true })
+</div><!-- /mainbody -->
+
+@@include('inc/fixbtns.html')
+
+@@include('inc/footer.html')

@@ -1,0 +1,25 @@
+@@include('inc/head.html', { "title": "Forgot pass" })
+
+<div class="mainbody nofooter">
+  @@include('inc/header.html', { "title": "שחזור סיסמא", "back": "login.html" })
+	<div class="mainbody-content pad">
+
+		<div class="wrapper">
+      <div class="image_circle">
+        <img src="images/svg/monkey-happy.svg" alt="">
+      </div>
+      <div class="form-line text-center">
+        <div class="h3">הכנס את כתובת הדואר האלקטרוני לחידוש סיסמא</div>
+      </div>
+      
+      @@include('inc/input.html')
+      <div class="form-line">
+        <button class="btn btn-yellow btn-block">שלח</button>
+      </div>
+      
+    </div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')
