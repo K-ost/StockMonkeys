@@ -1,13 +1,13 @@
 <div class="search_item">
   <div class="search_item-content">
     <div class="search_item-title">
-      <div class="search_item-indicator @@indicator"></div>
+      @@if(context.indicator){<div class="search_item-indicator @@indicator"></div>}
       @@title
     </div>
-    <duv class="search_item-values">
+    <div class="search_item-values">
       4,168
       <span class="color-@@color">@@val</span>
-    </duv>
+    </div>
   </div>
   <button class="btn_icon btn_icon-@@icon"></button>
 </div><!-- /search_item -->

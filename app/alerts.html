@@ -6,28 +6,61 @@
 
   <div class="mainbody-content nopad_top">
 
-    @@include('inc/segments.html')
-    
-    <div class="wrapper">
-      <h3>Alert will be here soon...</h3>
-    </div>
+    @@include('inc/segments.html', {
+      "filter": true,
+			"list": [
+				{ "title": "התראות שהתקבלו", "class": "active" },
+				{ "title": "התראות עתידיות", "class": "" }
+			]
+		})
 
     <div class="search_item-list">
 
-      @@loop('inc/search-item.html', [
+      @@loop('inc/alert-item.html', [
         {
-          "indicator": "green",
-          "color": "red",
           "title": "אלוני חץ",
-          "icon": "star_yellow",
-          "val": "-3.94%"
+          "text": "לייה יומית ב",
+          "date": true
+        },
+        {
+          "title": "Inc Ebay",
+          "text": "פריצה למעלה של מחיר 4,250",
+          "val": true,
+          "perc": true
+        },
+        {
+          "title": "Teva Pharmaceutical",
+          "text": "<span class='color-green'>ק</span> איתות קניה בגרף השבועי",
+          "val": true,
+          "perc": true
+        },
+        {
+          "title": "Ark Innovation Etf",
+          "text": "<span class='color-red'>מ</span> איתות מכירה בגרף השבועי",
+          "date": true
+        },
+        {
+          "title": "Inc Ebay",
+          "text": "פריצה למעלה של מחיר 4,250",
+          "date": true
+        },
+        {
+          "title": "Teva Pharmaceutical",
+          "text": "איתות קניה בגרף השבועי",
+          "date": true
+        },
+        {
+          "title": "Teva Pharmaceutical",
+          "text": "איתות קניה בגרף השבועי",
+          "date": true
+        },
+        {
+          "title": "Teva Pharmaceutical",
+          "text": "איתות קניה בגרף השבועי",
+          "date": true
         }
       ])
     </div><!-- /search_item-list -->
-
-    <div class="wrapper">
-			@@include('inc/module-banner.html')
-		</div><!-- /wrapper -->
 		
 	</div><!-- /mainbody-content -->
 	@@include('inc/navbar.html', { "alerts": true })

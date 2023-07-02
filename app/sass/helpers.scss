@@ -47,6 +47,8 @@ $grid: 16px;
 .clear {clear: both; display: block;}
 .clearfix {@include clr;}
 .container {margin: 0 auto; width: 1160px;}
+.d-flex {display: flex;}
+.align-center {align-items: center;}
 .row {
 	display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;
 	margin-left: -(calc($grid / 2)); margin-right: -(calc($grid / 2));

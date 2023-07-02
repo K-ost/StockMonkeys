@@ -25,10 +25,13 @@ if (navBars) {
 
 
 // js-btn_fix
-document.querySelector('.js-btn_fix').addEventListener('click', e => {
-	e.preventDefault()
-	document.querySelector('.fix_buttons').classList.toggle('opened')
-})
+const btnFix = document.querySelector('.js-btn_fix')
+if (btnFix) {
+	btnFix.addEventListener('click', e => {
+		e.preventDefault()
+		document.querySelector('.fix_buttons').classList.toggle('opened')
+	})
+}
 
 
 

@@ -1,0 +1,13 @@
+<div class="filter_item opened">
+  <a href="#" class="filter_item-header">@@title</a>
+  <div class="filter_item-content">
+    <div class="d-flex align-center margin_bottom2">
+      <div class="filter_item-price"><span>מחיר יעד</span> @@val</div>
+      <a href="#" class="color-yellow">איפוס</a>
+    </div>
+    <div class="filter_item-range">
+      @@if(context.perc != 'bell'){<div class="filter_item-range_val">@@perc</div>}
+      @@if(context.perc == 'bell'){<div class="filter_item-range_val bell"></div>}
+    </div>
+  </div>
+</div><!-- /filter_item -->

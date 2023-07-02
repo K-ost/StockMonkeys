@@ -1,0 +1,36 @@
+@@include('inc/head.html', { "title": "Alerts - Add new" })
+
+<div class="mainbody nofooter">
+	
+  @@include('inc/header.html', { "title": "ניהול התראות לנייר", "back": "alerts.html" })
+
+  <div class="mainbody-content nopad_top">
+
+    @@include('inc/sum.html')
+    
+    <div class="wrapper">
+
+      @@loop('inc/filter-item.html', [
+        {
+          "title": "התראת מחיר - פריצה למעלה",
+          "val": "4,376.40",
+          "perc": "35%"
+        },
+        {
+          "title": "התראת מחיר - פריצה שבירה למטה",
+          "val": "4,376.40",
+          "perc": "10%"
+        },
+        {
+          "title": "שינוי יומי באחוזים",
+          "val": "0",
+          "perc": "bell"
+        }
+      ])
+
+    </div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')

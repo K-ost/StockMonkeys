@@ -4,7 +4,13 @@
 	@@include('inc/timehead.html')
 	<div class="mainbody-content nopad_top">
 		
-		@@include('inc/segments.html')
+		@@include('inc/segments.html', {
+			"list": [
+				{ "title": "פורטפוליו", "class": "" },
+				{ "title": "חשבון דמו", "class": "active" },
+				{ "title": "מעקב", "class": "" }
+			]
+		})
 
 		<div class="wrapper">
 
