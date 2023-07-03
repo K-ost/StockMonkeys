@@ -14,19 +14,46 @@
         {
           "title": "התראת מחיר - פריצה למעלה",
           "val": "4,376.40",
-          "perc": "35%"
+          "perc": "35",
+          "range": true,
+          "id": 1
         },
         {
           "title": "התראת מחיר - פריצה שבירה למטה",
           "val": "4,376.40",
-          "perc": "10%"
+          "perc": "10",
+          "range": true,
+          "id": 2,
+          "color": "green"
         },
         {
           "title": "שינוי יומי באחוזים",
           "val": "0",
-          "perc": "bell"
+          "perc": "bell",
+          "range": true,
+          "id": 3,
+          "color": "red"
+        },
+        {
+          "title": "איתות מכירה",
+          "checks": true
         }
       ])
+
+      <div class="filter_bottom">
+        <div class="margin_bottom">
+          <div class="check-line">
+            <label class="check-field"><input type="radio" name="radios"> <span>התראה בזמן אמת</span></label>
+          </div>
+          <div class="check-line">
+            <label class="check-field"><input type="radio" name="radios"> <span>התראה בסוף יום</span></label>
+          </div>
+        </div>
+        <div class="margin_bottom">
+          <input type="text" class="simple-input full" placeholder="התראה נשלחה בתאריך">
+        </div>
+        <button class="btn btn-block btn-yellow font-bold">עדכון התראות לנייר</button>
+      </div><!-- /filter_item -->
 
     </div><!-- /wrapper -->
 		

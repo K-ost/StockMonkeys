@@ -34,4 +34,33 @@ if (btnFix) {
 }
 
 
+// range1
+function setRangeSlider(id, min, max) {
+	return new rSlider({
+		target: `#range-${id}`,
+		values: {min: min, max: max},
+		step: 1,
+		range: false,
+		tooltip: false,
+		scale: false,
+		labels: false,
+		set: [min, max],
+		onChange: (values) => {
+			document.querySelector(`#js_range_val-${id}`).textContent = values
+		}
+	})
+}
+const range1 = setRangeSlider(1, 1, 100)
+const range2 = setRangeSlider(2, -100, 0)
+const range3 = setRangeSlider(3, -100, 100)
+
+
+/* js-filter_btn */
+const filterBtns = document.querySelectorAll('.js-filter_btn')
+filterBtns.forEach(btn => {
+	btn.addEventListener('click', e => {
+		const parent = e.target.closest('.filter_item')
+		parent.classList.toggle('opened')
+	})
+})
 

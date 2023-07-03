@@ -343,7 +343,7 @@ $loaderSize: 40px;
   &-left {text-align: left;}
   &-percent {
     position: relative; padding-left: 16px;
-    &::after {@include bf; left: 0; top: 50%; @include icon(caret,12px,8px); margin-top: -4px;}
+    &::after {@include bf; left: 0; top: 50%; @include icon(caret,12px,10px); margin-top: -4px;}
     &.down {color: var(--color-red);}
     &.up {
       color: var(--color-green);
@@ -500,17 +500,22 @@ $circle: 1600px;
 
 /* filter_item */
 .filter_item {
-  margin-bottom: var(--gap);
+  margin-bottom: var(--gap); border: 2px solid transparent; border-radius: 9px;
+  &.green {border-color: var(--color-green);}
+  &.red {border-color: var(--color-red);}
   &-header {
-    background: var(--color-grey); position: relative; border-radius: 8px;
+    background: var(--color-grey); position: relative; border-radius: 6px;
     display: block; padding: 13px var(--gap) 13px 34px; color: #fff;
     text-decoration: none;
     &::after {
-      @include bf; @include icon(caret-yellow,14px,8px);
+      @include bf; @include icon(caret-yellow,12px,10px);
       left: var(--gap); top: 50%; margin-top: -4px;
     }
   }
-  &-content {background: #454547; border-radius: 0 0 8px 8px; padding: var(--gap); display: none;}
+  &-content {
+    background: #454547; border-radius: 0 0 8px 8px;
+    overflow: hidden; height: 0; padding: 0;
+  }
   &-price {
     background: var(--color-grey); border-radius: 8px;
     padding: 10px var(--gap); flex: 1; margin-left: var(--gap);
@@ -520,10 +525,12 @@ $circle: 1600px;
     }
   }
   &-range {
+    display: flex; align-items: center; direction: rtl;
+    &_body {flex: 1; margin-right: var(--gap);}
     &_val {
       background: var(--color-yellow); border-radius: 8px; width: 64px;
       height: 56px; display: flex; align-items: center; justify-content: center;
-      text-align: center; color: var(--color-black); font-weight: 700;
+      text-align: center; color: var(--color-black); font-weight: 700; direction: ltr;
       &.bell {
         background-image: url(../images/svg/bell-black.svg);
         background-position: center center;background-repeat: no-repeat;
@@ -533,7 +540,13 @@ $circle: 1600px;
   }
   &.opened &-header {border-radius: 8px 8px 0 0;}
   &.opened &-header::after {transform: matrix(1,0,0,-1,0,0);}
-  &.opened &-content {display: block;}
+  &.opened &-content {height: auto; padding: var(--gap);}
+}
+
+
+/* filter_bottom */
+.filter_bottom {
+  background: var(--color-grey); border-radius: 8px; padding: var(--gap);
 }
 
 

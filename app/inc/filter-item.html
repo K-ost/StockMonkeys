@@ -1,13 +1,46 @@
-<div class="filter_item opened">
-  <a href="#" class="filter_item-header">@@title</a>
+<div class="filter_item @@if(context.color){@@color}">
+  <a href="#" class="filter_item-header js-filter_btn">@@title</a>
   <div class="filter_item-content">
+
+    @@if(!context.checks){
     <div class="d-flex align-center margin_bottom2">
       <div class="filter_item-price"><span>מחיר יעד</span> @@val</div>
       <a href="#" class="color-yellow">איפוס</a>
     </div>
+    @@if(context.range){
     <div class="filter_item-range">
-      @@if(context.perc != 'bell'){<div class="filter_item-range_val">@@perc</div>}
-      @@if(context.perc == 'bell'){<div class="filter_item-range_val bell"></div>}
+      
+      @@if(context.perc != 'bell'){
+      <div class="filter_item-range_val">
+        <span id="js_range_val-@@id">@@perc</span>
+        <span>%</span>
+      </div>
+      }
+      @@if(context.perc == 'bell'){
+      <div class="filter_item-range_val bell"></div>
+      }
+      <div class="filter_item-range_body">
+        <input type="text" id="range-@@id" />
+      </div>
     </div>
+    }
+    }
+
+    @@if(context.checks){
+      <div class="margin_bottom font-bold d-flex align-center justify-content-between">
+        <div>כל האיתותים לפי שיטת תשע השאלות של אייל גורביץ</div>
+        <button class="btn_icon btn_icon-info"></button>
+      </div>
+      <div class="margin_bottom">בחר טווחי מסחר</div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח קצר</span></label>
+      </div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח בינוני</span></label>
+      </div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח ארוך</span></label>
+      </div>
+    }
   </div>
 </div><!-- /filter_item -->

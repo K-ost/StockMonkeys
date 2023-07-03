@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/scripts.css">
 	<link rel="stylesheet" href="css/styles.css" type="text/css">
 	<!--[if IE]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
 </head>
@@ -50,43 +50,126 @@
     
     <div class="wrapper">
 
-      <div class="filter_item opened">
-  <a href="#" class="filter_item-header">התראת מחיר - פריצה למעלה</a>
+      <div class="filter_item ">
+  <a href="#" class="filter_item-header js-filter_btn">התראת מחיר - פריצה למעלה</a>
   <div class="filter_item-content">
+
+    
     <div class="d-flex align-center margin_bottom2">
       <div class="filter_item-price"><span>מחיר יעד</span> 4,376.40</div>
       <a href="#" class="color-yellow">איפוס</a>
     </div>
+    
     <div class="filter_item-range">
-      <div class="filter_item-range_val">35%</div>
       
+      
+      <div class="filter_item-range_val">
+        <span id="js_range_val-1">35</span>
+        <span>%</span>
+      </div>
+      
+      
+      <div class="filter_item-range_body">
+        <input type="text" id="range-1" />
+      </div>
     </div>
+    
+    
+
+    
   </div>
-</div><!-- /filter_item --><div class="filter_item opened">
-  <a href="#" class="filter_item-header">התראת מחיר - פריצה שבירה למטה</a>
+</div><!-- /filter_item --><div class="filter_item green">
+  <a href="#" class="filter_item-header js-filter_btn">התראת מחיר - פריצה שבירה למטה</a>
   <div class="filter_item-content">
+
+    
     <div class="d-flex align-center margin_bottom2">
       <div class="filter_item-price"><span>מחיר יעד</span> 4,376.40</div>
       <a href="#" class="color-yellow">איפוס</a>
     </div>
+    
     <div class="filter_item-range">
-      <div class="filter_item-range_val">10%</div>
       
+      
+      <div class="filter_item-range_val">
+        <span id="js_range_val-2">10</span>
+        <span>%</span>
+      </div>
+      
+      
+      <div class="filter_item-range_body">
+        <input type="text" id="range-2" />
+      </div>
     </div>
+    
+    
+
+    
   </div>
-</div><!-- /filter_item --><div class="filter_item opened">
-  <a href="#" class="filter_item-header">שינוי יומי באחוזים</a>
+</div><!-- /filter_item --><div class="filter_item red">
+  <a href="#" class="filter_item-header js-filter_btn">שינוי יומי באחוזים</a>
   <div class="filter_item-content">
+
+    
     <div class="d-flex align-center margin_bottom2">
       <div class="filter_item-price"><span>מחיר יעד</span> 0</div>
       <a href="#" class="color-yellow">איפוס</a>
     </div>
+    
     <div class="filter_item-range">
       
+      
+      
       <div class="filter_item-range_val bell"></div>
+      
+      <div class="filter_item-range_body">
+        <input type="text" id="range-3" />
+      </div>
     </div>
+    
+    
+
+    
+  </div>
+</div><!-- /filter_item --><div class="filter_item ">
+  <a href="#" class="filter_item-header js-filter_btn">איתות מכירה</a>
+  <div class="filter_item-content">
+
+    
+
+    
+      <div class="margin_bottom font-bold d-flex align-center justify-content-between">
+        <div>כל האיתותים לפי שיטת תשע השאלות של אייל גורביץ</div>
+        <button class="btn_icon btn_icon-info"></button>
+      </div>
+      <div class="margin_bottom">בחר טווחי מסחר</div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח קצר</span></label>
+      </div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח בינוני</span></label>
+      </div>
+      <div class="check-line">
+        <label class="check-field"><input type="checkbox"> <span>טווח ארוך</span></label>
+      </div>
+    
   </div>
 </div><!-- /filter_item -->
+
+      <div class="filter_bottom">
+        <div class="margin_bottom">
+          <div class="check-line">
+            <label class="check-field"><input type="radio" name="radios"> <span>התראה בזמן אמת</span></label>
+          </div>
+          <div class="check-line">
+            <label class="check-field"><input type="radio" name="radios"> <span>התראה בסוף יום</span></label>
+          </div>
+        </div>
+        <div class="margin_bottom">
+          <input type="text" class="simple-input full" placeholder="התראה נשלחה בתאריך">
+        </div>
+        <button class="btn btn-block btn-yellow font-bold">עדכון התראות לנייר</button>
+      </div><!-- /filter_item -->
 
     </div><!-- /wrapper -->
 		
@@ -116,6 +199,7 @@
 </div><!-- /sidemenu -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
+<script src="js/range.js"></script>
 <script src="js/common.js"></script>
 
 </body>
