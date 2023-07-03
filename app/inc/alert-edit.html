@@ -1,0 +1,25 @@
+<div class="alert_item js-filter_parent">
+  <div class="alert_item-header">
+    <a href="#" class="alert_item-title js-filter_btn">@@title</a>
+    @@include('toggle.html')
+  </div>
+  <div class="alert_item-content">
+    @@loop('alert-item.html', [
+      {
+        "title": "אלוני חץ",
+        "text": "לייה יומית ב",
+        "trash": true
+      },
+      {
+        "title": "Inc Ebay",
+        "text": "פריצה למעלה של מחיר 4,250",
+        "trash": true
+      },
+      {
+        "title": "Teva Pharmaceutical",
+        "text": "<span class='color-green'>ק</span> איתות קניה בגרף השבועי",
+        "trash": true
+      }
+    ])
+  </div>
+</div><!-- /alert_item -->

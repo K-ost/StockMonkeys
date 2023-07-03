@@ -187,6 +187,7 @@ hr {
 	&-back {background-image: url(../images/svg/arrow.svg); transform: matrix(-1,0,0,1,0,0);}
 	&-star {background-image: url(../images/svg/star-o-yellow.svg);}
 	&-filter {background-image: url(../images/svg/filter-white.svg);}
+	&-trash {background-image: url(../images/svg/trash.svg);}
 	&-eye {
 		background-image: url(../images/svg/eye-slash.svg);
 		&.active {background-image: url(../images/svg/eye.svg);}
@@ -230,6 +231,29 @@ input[type="radio"] {
 	border-bottom: 1px solid rgba(255,255,255,0.25);
 	padding: 14px 0;
 	&:last-child {border-bottom: 0;}
+}
+
+
+/* toggle */
+.toggle {
+	width: 34px; height: 20px; position: relative; display: inline-block;
+	label {
+		display: block; height: 20px; cursor: pointer;
+		&::after {
+			@include bf; width: 100%; left: 0; border-radius: 8px; height: 12px; top: 4px;
+			background: var(--color-black);
+		}
+	}
+	input[type="checkbox"] {opacity: 0; position: absolute;}
+	&-handle {
+		background: #9d9d9e; border-radius: 50%; width: 20px; height: 20px;
+		position: absolute; left: 0; top: 0; transition: all 100ms linear;
+		z-index: 10;
+	}
+	input[type="checkbox"]:checked + &-handle {
+		background: var(--color-yellow);
+		transform: translateX(14px);
+	}
 }
 
 

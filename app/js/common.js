@@ -59,7 +59,7 @@ const range3 = setRangeSlider(3, -100, 100)
 const filterBtns = document.querySelectorAll('.js-filter_btn')
 filterBtns.forEach(btn => {
 	btn.addEventListener('click', e => {
-		const parent = e.target.closest('.filter_item')
+		const parent = e.target.closest('.js-filter_parent')
 		parent.classList.toggle('opened')
 	})
 })

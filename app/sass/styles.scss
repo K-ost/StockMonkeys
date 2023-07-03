@@ -515,6 +515,7 @@ $circle: 1600px;
   &-content {
     background: #454547; border-radius: 0 0 8px 8px;
     overflow: hidden; height: 0; padding: 0;
+    &_inner {padding: var(--gap);}
   }
   &-price {
     background: var(--color-grey); border-radius: 8px;
@@ -540,13 +541,34 @@ $circle: 1600px;
   }
   &.opened &-header {border-radius: 8px 8px 0 0;}
   &.opened &-header::after {transform: matrix(1,0,0,-1,0,0);}
-  &.opened &-content {height: auto; padding: var(--gap);}
+  &.opened &-content {height: auto;}
 }
 
 
 /* filter_bottom */
 .filter_bottom {
   background: var(--color-grey); border-radius: 8px; padding: var(--gap);
+}
+
+
+/* alert_item */
+.alert_item {
+  background: var(--color-grey); border-radius: 8px; margin: 0 0 var(--gap);
+  &-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: var(--gap);
+  }
+  &-title {
+    display: block; position: relative; padding-right: 20px;
+    &::after {@include bf; @include icon(caret-white,12px,10px); right: 0; top: 5px;}
+  }
+  &-content {display: none; padding: 0 0 8px;}
+  .search_item:nth-child(even) {background: #1a1a1c;}
+  &.opened &-title::after {
+    background-image: url(../images/svg/caret-yellow.svg);
+    transform: matrix(1,0,0,-1,0,0);
+  }
+  &.opened &-content {display: block;}
 }
 
 
