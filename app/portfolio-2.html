@@ -1,0 +1,63 @@
+@@include('inc/head.html', { "title": "Portfolio - Add deal to demo" })
+
+<div class="mainbody nofooter">
+	@@include('inc/header.html', {
+    "title": "הוספת עסקה חדשה לפורטפוליו",
+    "back": "portfolio.html",
+    "right": true,
+    "icon": "trash-red",
+    "del": true
+  })
+
+	<div class="mainbody-content">
+		
+		<div class="wrapper">
+
+      @@include('inc/sum.html')
+
+      <div class="margin_bottom3">
+        @@include('inc/switcher.html', { "name": "switcher1" })
+      </div>
+
+      <div class="margin_bottom3">
+        @@include('inc/switcher.html', { "name": "switcher2", "color": "red" })
+      </div>
+      <div class="margin_bottom3">
+        @@include('inc/switcher.html', { "name": "switcher3", "color": "grey" })
+      </div>
+
+      @@include('inc/input.html')
+      @@include('inc/input.html')
+      @@include('inc/input.html', { "sign": "$" })
+      @@include('inc/input.html')
+      @@include('inc/input.html', { "sign": "$" })
+      @@include('inc/input.html')
+      @@include('inc/input.html', { "text": true })
+
+      <div class="row footer_btns">
+        <div class="grid6">
+          <button class="btn btn-block btn-outline-yellow font-bold">ציטוט</button>
+        </div>
+        <div class="grid6">
+          <button class="btn btn-block btn-outline-yellow font-bold">עריכה</button>
+        </div>
+      </div><!-- /row -->
+
+      <button class="btn btn-block btn-yellow font-bold">ביצוע עסקה</button>
+
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+
+<div class="modal" id="portfolio-delete">
+  <div class="modal-title">מחיקת עסקה</div>
+  <div class="margin_bottom2">האם אתה בטוח כי ברצונך למחוק עסקה זו</div>
+  <div class="modal-btns">
+    <button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-red">כן, מחק</button>
+  </div>
+</div><!-- /modal -->
+
+@@include('inc/footer.html')

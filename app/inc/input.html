@@ -1,6 +1,11 @@
 <div class="form-line">
-  <div class="form-field @@if(context.error){error}">
-    <input type="text" class="form-control" @@if(context.error){value="3030"} value="@@if(context.val){@@val}" required>
+  <div class="form-field @@if(context.error){error}@@if(context.text){ form-field-area}">
+    @@if(!context.text){
+      <input type="text" class="form-control" @@if(context.error){value="3030"} value="@@if(context.val){@@val}" required>
+    }
+    @@if(context.text){
+      <textarea class="form-control" required></textarea>
+    }
     <span class="form-label">שם משפחה</span>
     @@if(context.eye){<button class="btn_icon btn_icon-eye"></button>}  
     @@if(context.sign){<div class="form-field-sign">@@sign</div>}  

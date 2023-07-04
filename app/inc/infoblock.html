@@ -1,5 +1,6 @@
 <div class="infoblock">
   <div class="infoblock-inner">
+    @@if(context.info){<button class="btn_icon btn_icon-info"></button>}
     <div class="infoblock-title">@@title</div>
     <div class="infoblock-val @@if(context.color){color-@@color}">@@val</div>
     @@if(context.sm){<div class="infoblock-sm color-@@color">@@sm</div>}

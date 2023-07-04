@@ -7,10 +7,13 @@
   </div>
   <div class="appheader-right">
     @@if(context.icon){
-      <button class="btn_icon btn_icon-@@icon"></button>
+      <button class="btn_icon btn_icon-@@icon" @@if(context.del){data-fancybox data-src="#portfolio-delete"}></button>
     }
     @@if(context.settings){
       <a href="login.html">יציאה מהחשבון</a>
+    }
+    @@if(context.time){
+      <div class="appheader-time appheader-time-right">18:47</div>
     }
   </div>
 </div><!-- /appheader -->

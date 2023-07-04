@@ -1,5 +1,12 @@
 <div class="fix_buttons">
-  <button class="btn_fix btn_fix-hide btn_fix-chart"></button>
-  <button class="btn_fix btn_fix-hide btn_fix-plus"></button>
+  @@if(!context.portfolio){
+    <button class="btn_fix btn_fix-hide btn_fix-chart"></button>
+    <button class="btn_fix btn_fix-hide btn_fix-plus"></button>
+  }
+  @@if(context.portfolio){
+    <button class="btn_fix btn_fix-hide btn_fix-list"></button>
+    <button class="btn_fix btn_fix-hide btn_fix-filter" data-fancybox data-src="#portfolio-filter"></button>
+    <button class="btn_fix btn_fix-hide btn_fix-plus"></button>
+  }
   <button class="btn_fix btn_fix-dots js-btn_fix"></button>
 </div><!-- /fix_buttons -->

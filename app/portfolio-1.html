@@ -1,7 +1,13 @@
 @@include('inc/head.html', { "title": "Portfolio - Account Summary Popup" })
 
 <div class="mainbody nofooter">
-	@@include('inc/header.html', { "title": "סיכום חשבון", "back": "portfolio.html" })
+	@@include('inc/header.html', {
+    "title": "סיכום חשבון",
+    "back": "portfolio.html",
+    "right": true,
+    "time": true
+  })
+
 	<div class="mainbody-content">
 		
 		<div class="wrapper">
@@ -20,10 +26,10 @@
           @@include('inc/infoblock.html', { "title": "רווח / הפסד יומי", "val": "-194.44$", "sm": "-1.36%", "color": "red" })
         </div><!-- /grid -->
         <div class="grid6">
-          @@include('inc/infoblock.html', { "title": "סיכוי סיכון", "val": "42.5%" })
+          @@include('inc/infoblock.html', { "title": "שיעור הצלחות", "val": "42.5%" })
         </div><!-- /grid -->
         <div class="grid6">
-          @@include('inc/infoblock.html', { "title": "שיעור הצלחות", "val": "62.5%" })
+          @@include('inc/infoblock.html', { "title": "סיכוי סיכון", "val": "62.5%", "info": true })
         </div><!-- /grid -->
       </div><!-- /row -->
 

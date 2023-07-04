@@ -43,6 +43,39 @@
 	@@include('inc/navbar.html', { "portfolio": true })
 </div><!-- /mainbody -->
 
-@@include('inc/fixbtns.html')
+@@include('inc/fixbtns.html', { "portfolio": true })
+
+<div class="modal" id="portfolio-filter">
+	<div class="modal-title">סינון עסקאות</div>
+
+	<div class="margin_bottom">
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות פתוחות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות לונג</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות פתוחות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות לונג</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+	</div><!-- /margin_bottom -->
+
+	<div class="modal-btns">
+    <button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-yellow">סנן עסקאות</button>
+  </div>
+</div><!-- /modal -->
 
 @@include('inc/footer.html', { "page": "portfolio" })

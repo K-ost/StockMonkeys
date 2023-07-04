@@ -114,6 +114,10 @@ $loaderSize: 40px;
     padding-right: 28px;
     em {color: var(--color-light); font-style: normal; margin: 0 2px;}
     &::before {@include bf; @include icon(clock,20px,20px); right: 0; top: 0;}
+    &-right {
+      padding-left: 28px; padding-right: 0;
+      &::before {left: 0; right: auto;}
+    }
   }
   .btn_icon {
     margin-right: 10px;
@@ -476,11 +480,12 @@ $circle: 1600px;
 .infoblock {
   background: var(--color-grey); border-radius: 8px; text-align: center;
   padding: 8px var(--gap); display: flex; align-items: center; min-height: 104px;
-  margin-bottom: var(--gap);
+  margin-bottom: var(--gap); position: relative;
   &-inner {width: 100%;}
   &-title {margin-bottom: 7px;}
   &-sm {margin-top: 7px;}
   &-val {font-size: 20px; font-weight: 700;}
+  .btn_icon {position: absolute; left: 6px; top: 6px;}
 }
 
 
@@ -495,6 +500,8 @@ $circle: 1600px;
   }
   input[type="radio"] {position: absolute; opacity: 0; left: 0; top: 0;}
   input[type="radio"]:checked + &-name {background: var(--color-green); color: var(--color-black);}
+  &-red input[type="radio"]:checked + &-name {background: var(--color-red);}
+  &-grey input[type="radio"]:checked + &-name {background: #9d9d9e;}
 }
 
 
@@ -618,3 +625,12 @@ $circle: 1600px;
     &:last-child {margin: 0;}
   }
 }
+
+
+/* footer_btns */
+.footer_btns {
+  margin-bottom: var(--gap);
+  &:last-child {margin-bottom: 0;}
+}
+
+
