@@ -1,0 +1,104 @@
+@@include('inc/head.html', { "title": "Portfolio" })
+
+<div class="mainbody">
+	@@include('inc/timehead.html')
+	<div class="mainbody-content nopad_top">
+		
+		@@include('inc/segments.html', {
+			"list": [
+				{ "title": "פורטפוליו", "class": "" },
+				{ "title": "חשבון דמו", "class": "active" },
+				{ "title": "מעקב", "class": "" }
+			]
+		})
+
+		<div class="wrapper">
+
+			@@include('inc/module.html', { "title": "סיכום חשבון", "list5": true, "footer": true })
+
+		</div><!-- /wrapper -->
+
+		<hr>
+
+		<div class="wrapper margin_bottom">
+			@@include('inc/tabs.html')
+		</div>
+		
+		@@include('inc/tabs-swiper.html')
+
+    <div class="search_item-list">
+      @@loop('inc/alert-item.html', [
+        {
+          "title": "אלוני חץ",
+          "text": "לייה יומית ב",
+          "date": true
+        },
+        {
+          "title": "Inc Ebay",
+          "text": "פריצה למעלה של מחיר 4,250",
+          "val": true,
+          "perc": true
+        },
+        {
+          "title": "Teva Pharmaceutical",
+          "text": "<span class='color-green'>ק</span> איתות קניה בגרף השבועי",
+          "val": true,
+          "perc": true
+        },
+        {
+          "title": "Ark Innovation Etf",
+          "text": "<span class='color-red'>מ</span> איתות מכירה בגרף השבועי",
+          "date": true
+        },
+        {
+          "title": "Inc Ebay",
+          "text": "פריצה למעלה של מחיר 4,250",
+          "date": true
+        }
+      ])
+    </div><!-- /search_item-list -->
+
+    <div class="wrapper">
+			@@include('inc/module-banner.html')
+		</div><!-- /wrapper -->
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "portfolio": true })
+</div><!-- /mainbody -->
+
+@@include('inc/fixbtns.html', { "portfolio": true })
+
+<div class="modal" id="portfolio-filter">
+	<div class="modal-title">סינון עסקאות</div>
+
+	<div class="margin_bottom">
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות פתוחות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות לונג</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות פתוחות</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>עסקאות לונג</span></label>
+		</div>
+		<div class="check-line">
+			<label class="check-field"><input type="radio" name="radios"> <span>כל העסקאות</span></label>
+		</div>
+	</div><!-- /margin_bottom -->
+
+	<div class="modal-btns">
+    <button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-yellow">סנן עסקאות</button>
+  </div>
+</div><!-- /modal -->
+
+@@include('inc/footer.html', { "page": "portfolio" })
