@@ -64,3 +64,11 @@ filterBtns.forEach(btn => {
 	})
 })
 
+
+// Modals
+Fancybox.bind("[data-fancybox]", {
+  closeButton: false,
+	dragToClose: false,
+})
+
+

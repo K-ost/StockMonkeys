@@ -156,6 +156,10 @@ hr {
 	&-yellow {
 		background: var(--color-yellow);
 	}
+	&-secondary {
+		background: #9d9d9e; color: #fff;
+	}
+	&-empty {background: 0 !important; color: var(--color-yellow);}
 	&-facebook, &-apple, &-google, &-email {
 		&::after {@include bf; right: 16px; top: 50%; margin-top: -11px;}
 	}
@@ -330,6 +334,10 @@ $btn_fix_height: 56px;
 		display: block; min-width: 20px; max-width: 20px; height: 20px; margin: 0 3px 0 0;
 		&.active {background-image: url(../images/svg/star-o-yellow.svg);}
 	}
+	&-full {
+		display: flex; justify-content: center; margin: 0 0 30px;
+		span {min-width: 24px; max-width: 24px; height: 24px; background-size: 24px;}
+	}
 }
 
 
@@ -352,6 +360,24 @@ $btn_fix_height: 56px;
 		span ins {color: rgba(255,255,255,0.6); font-size: 12px; line-height: 16px; margin: 0;}
 	}
 }
+
+
+/* modal */
+.fancybox__backdrop {background: #0a0b0d;}
+.fancybox__slide {padding: 4px 16px;}
+.modal {
+	background: #454547; border-radius: 8px; padding: var(--gap); direction: rtl;
+	display: none; position: relative; color: #fff; width: 100%; max-width: 380px;
+	a {color: var(--color-yellow);}
+	&-title {font-weight: 700; margin: 0 0 30px;}
+	&-btns {
+		display: flex; justify-content: flex-end;
+		.btn {margin-right: var(--gap); font-weight: 700;}
+		.btn:first-child {margin-right: 0;}
+		&.full .btn {flex: 1;}
+	}
+}
+
 
 
 

@@ -359,6 +359,14 @@ hr {
 .btn-yellow {
   background: var(--color-yellow);
 }
+.btn-secondary {
+  background: #9d9d9e;
+  color: #fff;
+}
+.btn-empty {
+  background: 0 !important;
+  color: var(--color-yellow);
+}
 .btn-facebook::after, .btn-apple::after, .btn-google::after, .btn-email::after {
   content: "";
   position: absolute;
@@ -719,6 +727,17 @@ input[type=checkbox]:checked + .toggle-handle {
 .rating span.active {
   background-image: url(../images/svg/star-o-yellow.svg);
 }
+.rating-full {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 30px;
+}
+.rating-full span {
+  min-width: 24px;
+  max-width: 24px;
+  height: 24px;
+  background-size: 24px;
+}
 
 /* range */
 .rs-container {
@@ -766,6 +785,48 @@ input[type=checkbox]:checked + .toggle-handle {
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+}
+
+/* modal */
+.fancybox__backdrop {
+  background: #0a0b0d;
+}
+
+.fancybox__slide {
+  padding: 4px 16px;
+}
+
+.modal {
+  background: #454547;
+  border-radius: 8px;
+  padding: var(--gap);
+  direction: rtl;
+  display: none;
+  position: relative;
+  color: #fff;
+  width: 100%;
+  max-width: 380px;
+}
+.modal a {
+  color: var(--color-yellow);
+}
+.modal-title {
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+.modal-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-btns .btn {
+  margin-right: var(--gap);
+  font-weight: 700;
+}
+.modal-btns .btn:first-child {
+  margin-right: 0;
+}
+.modal-btns.full .btn {
+  flex: 1;
 }
 
 /* start_screen */

@@ -20,7 +20,7 @@
       
       <div class="sett_module">
         <div class="sett_module-name">ערוך כתובת דואר אלקטרוני</div>
-        <button class="btn_icon btn_icon-envelope-white"></button>
+        <button class="btn_icon btn_icon-envelope-white" data-fancybox data-src="#email-modal"></button>
       </div><!-- /sett_module -->
 
       <div class="sett_module block">
@@ -37,7 +37,7 @@
 
       <div class="sett_module">
         <div class="sett_module-name">דרגו אותנו</div>
-        <a href="#" class="rating">
+        <a href="#" class="rating" data-fancybox data-src="#rating-modal">
           <span class="active"></span>
           <span class="active"></span>
           <span class="active"></span>
@@ -63,5 +63,33 @@
 		
 	</div><!-- /mainbody-content -->
 </div><!-- /mainbody -->
+
+
+<div class="modal" id="email-modal">
+  <div class="modal-title">ערוך כתובת דואר אלקטרוני</div>
+  @@include('inc/input.html', { "val": "evgy@email.com" })
+  <div class="modal-btns">
+    <button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-yellow">שמור</button>
+  </div>
+</div><!-- /modal -->
+
+
+<div class="modal" id="rating-modal">
+  <div class="modal-title text-center">דרגו אותנו</div>
+  <div class="rating rating-full">
+    <span class="active"></span>
+    <span class="active"></span>
+    <span class="active"></span>
+    <span class="active"></span>
+    <span></span>
+  </div>
+  <div class="modal-btns full">
+    <button class="btn btn-yellow" disabled>אישור</button>
+    <button class="btn btn-empty" data-fancybox-close>סגור</button>
+  </div>
+</div><!-- /modal -->
+
+
 
 @@include('inc/footer.html')
