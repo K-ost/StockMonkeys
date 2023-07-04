@@ -1,0 +1,67 @@
+@@include('inc/head.html', { "title": "settings" })
+
+<div class="mainbody sett_page">
+  <div class="sett_card">
+    @@include('inc/header.html', { "title": "הגדרות", "back": "overview.html", "settings": true, "right": true })
+    <div class="sett_user">
+      <div class="sett_user-img">
+        <img src="images/svg/monkey.svg" alt="">
+      </div>
+      <div class="sett_user-details">
+        <div class="sett_user-name">שם מלא</div>
+        <div class="sett_user-email">username@mail.com</div>
+      </div>
+    </div>
+  </div><!-- /sett_card -->
+
+	<div class="mainbody-content flex_column">
+
+		<div class="wrapper flex_height">
+      
+      <div class="sett_module">
+        <div class="sett_module-name">ערוך כתובת דואר אלקטרוני</div>
+        <button class="btn_icon btn_icon-envelope-white"></button>
+      </div><!-- /sett_module -->
+
+      <div class="sett_module block">
+        <div class="sett_module-name"></div>
+        <div class="sett_module-item">
+          <div>התראות בסלולר</div>
+          @@include('inc/toggle.html')
+        </div>
+        <div class="sett_module-item">
+          <div>התראות במייל</div>
+          @@include('inc/toggle.html')
+        </div>
+      </div><!-- /sett_module -->
+
+      <div class="sett_module">
+        <div class="sett_module-name">דרגו אותנו</div>
+        <a href="#" class="rating">
+          <span class="active"></span>
+          <span class="active"></span>
+          <span class="active"></span>
+          <span class="active"></span>
+          <span></span>
+        </a>
+      </div><!-- /sett_module -->
+      
+      <div class="sett_module">
+        <div class="sett_module-name">צור קשר</div>
+        <button class="btn_icon btn_icon-headset"></button>
+      </div><!-- /sett_module -->
+      
+    </div><!-- /wrapper -->
+
+    <div class="sett_footer">
+      <p>
+        <span><a href="#">תנאי השימוש</a></span>
+        <span><a href="#">מדיניות הפרטיות</a></span>
+      </p>
+      <p>אפליקציית רצפים מבית בורסה גרף כל הזכויות שמורות גרסא 1.2.0</p>
+    </div><!-- /sett_footer -->
+		
+	</div><!-- /mainbody-content -->
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html')

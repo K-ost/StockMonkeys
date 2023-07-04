@@ -2,12 +2,15 @@
   <div class="appheader-left">
     <a href="@@back" class="btn_icon btn_icon-back"></a>
   </div>
-  <div class="appheader-middle">
+  <div class="appheader-middle @@if(context.right){text-right}">
     @@title
   </div>
   <div class="appheader-right">
     @@if(context.icon){
       <button class="btn_icon btn_icon-@@icon"></button>
+    }
+    @@if(context.settings){
+      <a href="login.html">יציאה מהחשבון</a>
     }
   </div>
 </div><!-- /appheader -->

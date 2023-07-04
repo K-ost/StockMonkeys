@@ -29,7 +29,7 @@ body {
 }
 main {display: block;}
 img {border: 0; max-width: 100%;}
-p {margin: 0 0 20px; &:last-child {margin: 0;} }
+p {margin: 0 0 var(--gap); &:last-child {margin: 0;} }
 a, input, textarea {outline: none;}
 a {color: #fff; text-decoration: none;}
 th {font-weight: normal; text-align: left;}
@@ -62,13 +62,15 @@ $grid: 16px;
 .order-first {-ms-flex-order: -1; order: -1;}
 .order-last {-ms-flex-order: 13; order: 13;}
 .pull-right {float: right;}
-.text-center {text-align: center;}
-.text-right {text-align: right;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
 .sm-visible, .tb-visible {display: none;}
 .margin_bottom0 {margin-bottom: 8px;}
 .margin_bottom {margin-bottom: var(--gap);}
 .margin_bottom2 {margin-bottom: 24px;}
 .margin_bottom3 {margin-bottom: 32px;}
+.flex_column {display: flex; flex-direction: column;}
+.flex_height {flex: 1;}
 hr {
 	background: var(--color-line); border: 0; clear: both; height: 1px;
 	display: block; padding: 0; margin: 24px 0; width: 100%;
@@ -188,6 +190,9 @@ hr {
 	&-star {background-image: url(../images/svg/star-o-yellow.svg);}
 	&-filter {background-image: url(../images/svg/filter-white.svg);}
 	&-trash {background-image: url(../images/svg/trash.svg);}
+	&-envelope {background-image: url(../images/svg/envelope.svg);}
+	&-envelope-white {background-image: url(../images/svg/envelope-white.svg);}
+	&-headset {background-image: url(../images/svg/headset.svg);}
 	&-eye {
 		background-image: url(../images/svg/eye-slash.svg);
 		&.active {background-image: url(../images/svg/eye.svg);}
@@ -314,6 +319,17 @@ $btn_fix_height: 56px;
 		right: 4px; top: 50%; margin-top: -6px;
 	}
 	li.dev::after {background-color: var(--color-yellow);}
+}
+
+
+/* rating */
+.rating {
+	display: inline-flex; direction: ltr;
+	span {
+		background: url(../images/svg/star-yellow.svg) center center / 20px no-repeat;
+		display: block; min-width: 20px; max-width: 20px; height: 20px; margin: 0 3px 0 0;
+		&.active {background-image: url(../images/svg/star-o-yellow.svg);}
+	}
 }
 
 

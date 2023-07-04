@@ -119,7 +119,7 @@ $loaderSize: 40px;
     margin-right: 10px;
     &:first-child {margin-right: 0;}
   }
-  &-left, &-right {min-width: 36px; background: #000;}
+  &-left, &-right {min-width: 36px;}
   &-middle {
     text-align: center; flex: 1; padding: 0 var(--gap);
     white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
@@ -572,7 +572,49 @@ $circle: 1600px;
 }
 
 
+/* sett_card */
+.mainbody.sett_page {
+  padding: 0;
+}
+.sett_card {
+  background: var(--color-yellow); border-radius: 0 0 16px 16px;
+  height: 180px; padding: 56px var(--gap) 0; display: flex; align-items: center;
+  .fixheader {position: absolute;}
+  .appheader {
+    background: 0; border-color: rgba(49,50,52,0.16); color: var(--color-black);
+    a {color: inherit;}
+  }
+  .btn_icon-back {background-image: url(../images/svg/arrow-black.svg);}
+}
 
+/* sett_user */
+.sett_user {
+  display: flex; align-items: center; color: var(--color-black);
+  &-img {
+    background: #fff; border-radius: 50%; width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+    img {display: block; max-width: 52px;}
+  }
+  &-details {padding-right: var(--gap);}
+  &-name {font-size: 20px; font-weight: 700; line-height: 24px; margin: 0 0 6px;}
+}
 
+/* sett_footer */
+.sett_footer {
+  color: rgba(255,255,255,0.6); text-align: center; padding: var(--gap);
+  a {color: var(--color-yellow);}
+  span {margin-left: 20px;}
+  span:last-child {margin-left: 0;}
+}
 
-
+/* sett_module */
+.sett_module {
+  background: var(--color-grey); border-radius: 8px; margin: 0 0 var(--gap);
+  padding: 8px var(--gap); display: flex; align-items: center; min-height: 56px;
+  justify-content: space-between; position: relative;
+  &.block {display: block; padding: var(--gap);}
+  &-item {
+    display: flex; align-items: center; justify-content: space-between; margin: 0 0 24px;
+    &:last-child {margin: 0;}
+  }
+}
