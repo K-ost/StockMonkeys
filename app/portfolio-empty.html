@@ -1,0 +1,19 @@
+@@include('inc/head.html', { "title": "Portfolio" })
+
+<div class="mainbody">
+	@@include('inc/timehead.html')
+	<div class="mainbody-content d-flex align-center justify-center">
+		
+		<div class="wrapper text-center">
+      <div class="image_circle big">
+        <img src="images/svg/monkey-thinkin.svg" alt="">
+      </div>
+      <div class="margin_bottom">לא הוגדרו התראות</div>
+      <button class="btn btn-yellow font-bold">ניהול התראות</button>
+    </div>
+		
+	</div><!-- /mainbody-content -->
+	@@include('inc/navbar.html', { "portfolio": true })
+</div><!-- /mainbody -->
+
+@@include('inc/footer.html', { "page": "portfolio" })

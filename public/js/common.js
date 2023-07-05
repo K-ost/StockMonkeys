@@ -1,4 +1,18 @@
 
+// date creating
+const dateSpan = document.querySelector('#js_date')
+const timeSpan = document.querySelector('#js_time')
+const dateGot = new Date()
+const dateGotDay = ( dateGot.getDate() < 10 ) ? '0' + dateGot.getDate() : dateGot.getDate()
+const dateGotMonth = ( dateGot.getMonth() < 10 ) ? '0' + dateGot.getMonth() : dateGot.getMonth()
+const dateGotHours = ( dateGot.getHours() < 10 ) ? '0' + dateGot.getHours() : dateGot.getHours()
+const dateGotMins = ( dateGot.getMinutes() < 10 ) ? '0' + dateGot.getMinutes() : dateGot.getMinutes()
+const dateString = `${dateGotDay}.${dateGotMonth}.${dateGot.getFullYear()}`
+const timeString = dateGotHours + ':' + dateGotMins
+dateSpan.innerText = dateString
+timeSpan.innerText = timeString
+
+
 // Swiper
 const financeSlider = new Swiper('.finance_slider', {
 	slidesPerView: 'auto',

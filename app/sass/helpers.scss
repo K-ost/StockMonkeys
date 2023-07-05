@@ -70,6 +70,7 @@ $grid: 16px;
 .margin_bottom2 {margin-bottom: 24px;}
 .margin_bottom3 {margin-bottom: 32px;}
 .flex_column {display: flex; flex-direction: column;}
+.justify-center {justify-content: center;}
 .flex_height {flex: 1;}
 hr {
 	background: var(--color-line); border: 0; clear: both; height: 1px;
@@ -291,10 +292,10 @@ $btn_fix_height: 56px;
 .fix_buttons {
 	position: fixed; bottom: 80px; z-index: 500;
 	.btn_fix-hide {opacity: 0; visibility: hidden;}
-	&.opened .btn_fix-hide {opacity: 1; visibility: visible;}
-	&.opened .btn_fix-hide:nth-child(1) {transform: translateY(-192px);}
-	&.opened .btn_fix-hide:nth-child(2) {transform: translateY(-128px);}
-	&.opened .btn_fix-hide:nth-child(3) {transform: translateY(-64px);}
+	&.opened &-content .btn_fix-hide {opacity: 1; visibility: visible;}
+	&.opened &-content .btn_fix-hide:nth-child(3) {transform: translateY(-192px);}
+	&.opened &-content .btn_fix-hide:nth-child(2) {transform: translateY(-128px);}
+	&.opened &-content .btn_fix-hide:nth-child(1) {transform: translateY(-64px);}
 }
 .btn_fix {
 	background-color: var(--color-yellow); width: $btn_fix_height; height: $btn_fix_height;
@@ -322,6 +323,10 @@ $btn_fix_height: 56px;
 	width: 200px;
 	height: 200px;
 	img {display: block; max-width: 138px;}
+	&.big {
+		width: 240px; height: 240px;
+		img {width: 148px;}
+	}
 }
 
 

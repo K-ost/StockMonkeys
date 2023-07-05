@@ -19,7 +19,7 @@
 
 <div class="mainbody">
 	<div class="fixheader appheader">
-  <div class="appheader-time">18:47 <em>|</em> 08.08.2021</div>
+  <div class="appheader-time"><span id="js_time"></span> <em>|</em> <span id="js_date"></span></div>
   <a href="search.html" class="btn_icon btn_icon-search"></a>
   <button class="btn_icon btn_icon-refresh"></button>
 </div><!-- /appheader -->
@@ -223,7 +223,7 @@
   <ul>
     <li><a href="#" class="navbar-bars js-bars">תפריט</a></li>
     <li><a href="watchlist.html" class="navbar-star ">במעקב</a></li>
-    <li><a href="#" class="navbar-heart ">סורק</a></li>
+    <li><a href="discovery.html" class="navbar-heart ">סורק</a></li>
     <li><a href="alerts.html" class="navbar-bell ">התראות</a></li>
     <li><a href="portfolio.html" class="navbar-briefcase active">פורטפוליו</a></li>
     <li><a href="overview.html" class="navbar-chart-bar ">שוק</a></li>
@@ -232,12 +232,14 @@
 </div><!-- /mainbody -->
 
 <div class="fix_buttons">
-  
-  
-    <a href="portfolio-list.html" class="btn_fix btn_fix-hide btn_fix-list"></a>
-    <button class="btn_fix btn_fix-hide btn_fix-filter" data-fancybox data-src="#portfolio-filter"></button>
-    <a href="portfolio-2.html" class="btn_fix btn_fix-hide btn_fix-plus"></a>
-  
+  <div class="fix_buttons-content">
+    
+    
+      <a href="portfolio-2.html" class="btn_fix btn_fix-hide btn_fix-plus"></a>
+      <button class="btn_fix btn_fix-hide btn_fix-filter" data-fancybox data-src="#portfolio-filter"></button>
+      <a href="portfolio-list.html" class="btn_fix btn_fix-hide btn_fix-list"></a>
+    
+  </div>
   <button class="btn_fix btn_fix-dots js-btn_fix"></button>
 </div><!-- /fix_buttons -->
 
