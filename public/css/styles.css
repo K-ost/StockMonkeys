@@ -1601,8 +1601,11 @@ input[type=checkbox]:checked + .toggle-handle {
 .first_screen-info:last-child {
   margin: 0;
 }
+.first_screen-info span {
+  margin: 0 14px;
+}
 .first_screen-info .caret-down, .first_screen-info .caret-up {
-  margin: 0 8px;
+  margin: 0 4px !important;
 }
 .first_screen-btns {
   display: flex;
@@ -2413,4 +2416,102 @@ input[type=radio]:checked + .switcher-name {
   background-color: var(--color-red);
   background-image: url(../images/svg/heart-crack.svg);
   margin-right: var(--gap);
+}
+
+/* discovery_card */
+.discovery_card {
+  margin: var(--gap) auto 24px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.discovery_card-tag {
+  position: absolute;
+  left: 50%;
+  background: var(--color-yellow);
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-black);
+  padding: 2px var(--gap);
+  transform: translateX(-50%);
+  top: -12px;
+}
+.discovery_card-inner {
+  background: var(--color-grey);
+  border-radius: 8px;
+  position: relative;
+  z-index: 5;
+}
+.discovery_card::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 32px;
+  border-radius: 8px;
+  background: #454547;
+  left: var(--gap);
+  right: var(--gap);
+  bottom: -8px;
+  z-index: 1;
+}
+.discovery_card-chart img {
+  display: block;
+  width: 100%;
+}
+.discovery_card-top, .discovery_card-bottom {
+  padding: var(--gap);
+}
+.discovery_card .first_screen-meta {
+  text-align: right;
+  margin: 0 0 5px;
+}
+.discovery_card .first_screen-info {
+  justify-content: flex-start;
+  font-size: 24px;
+  line-height: 28px;
+}
+.discovery_card .colors_pick {
+  margin: 0;
+}
+.discovery_card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+.discovery_card-title2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  text-align: center;
+}
+.discovery_card .btn_icon-info {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.discovery_card-react {
+  background: var(--color-green) url(../images/svg/monkey-happy.svg) center center/145px no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px 0 0 -100px;
+  width: 200px;
+  height: 200px;
+  transition: all 200ms ease-in-out;
+  transform: scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+.discovery_card-react.shown {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.discovery_card-react.angry {
+  background-color: var(--color-red);
+  background-image: url(../images/svg/monkey-angry.svg);
 }

@@ -291,7 +291,8 @@ $loaderSize: 40px;
     font-size: 32px; line-height: 34px; margin: 0 0 24px; font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     &:last-child {margin: 0;}
-    .caret-down, .caret-up {margin: 0 8px;}
+    span {margin: 0 14px;}
+    .caret-down, .caret-up {margin: 0 4px !important;}
   }
   &-btns {
     display: flex; align-items: center; justify-content: center;
@@ -658,6 +659,47 @@ $circle: 1600px;
   &-dislike {
     background-color: var(--color-red); background-image: url(../images/svg/heart-crack.svg);
     margin-right: var(--gap);
+  }
+}
+
+
+/* discovery_card */
+.discovery_card {
+  margin: var(--gap) auto 24px; position: relative; width: 100%; max-width: 400px;
+  &-tag {
+    position: absolute; left: 50%; background: var(--color-yellow);
+    border-radius: 8px; font-weight: 700; line-height: 20px; color: var(--color-black);
+    padding: 2px var(--gap); transform: translateX(-50%); top: -12px;
+  }
+  &-inner {
+    background: var(--color-grey); border-radius: 8px;
+    position: relative; z-index: 5;
+  }
+  &::before {
+    @include bf; height: 32px; border-radius: 8px; background: #454547;
+    left: var(--gap); right: var(--gap); bottom: -8px; z-index: 1;
+  }
+  &-chart {
+    img {display: block; width: 100%;}
+  }
+  &-top, &-bottom {padding: var(--gap);}
+  .first_screen-meta {text-align: right; margin: 0 0 5px;}
+  .first_screen-info {justify-content: flex-start; font-size: 24px; line-height: 28px;}
+  .colors_pick {margin: 0;}
+  &-title {font-size: 24px; line-height: 28px; font-weight: 700; margin: 0 0 7px;}
+  &-title2 {
+    font-size: 20px; line-height: 24px; font-weight: 700; margin: 0 0 12px;
+    text-align: center;
+  }
+  .btn_icon-info {position: absolute; left: 8px; top: 8px;}
+
+  &-react {
+    background: var(--color-green) url(../images/svg/monkey-happy.svg) center center /145px no-repeat;
+    border-radius: 50%; position: absolute; left: 50%; top: 50%; margin: -100px 0 0 -100px;
+    width: 200px; height: 200px; transition: all 200ms ease-in-out;
+    transform: scale(0.5); opacity: 0; visibility: hidden;
+    &.shown {transform: scale(1); opacity: 1; visibility: visible;}
+    &.angry {background-color: var(--color-red); background-image: url(../images/svg/monkey-angry.svg);}
   }
 }
 

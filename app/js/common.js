@@ -96,6 +96,7 @@ Fancybox.bind("[data-fancybox]", {
 const selects = document.querySelectorAll('.js-select')
 selects.forEach(select => {
 	select.addEventListener('click', e => {
+		e.preventDefault()
 		const parent = e.target.closest('.selectbox')
 		parent.classList.toggle('opened')
 	})
@@ -103,6 +104,7 @@ selects.forEach(select => {
 const selectOptions = document.querySelectorAll('.selectbox-dropdown ul li')
 selectOptions.forEach(option => {
 	option.addEventListener('click', e => {
+		e.preventDefault()
 		const text = e.target.innerText
 		const parent = e.target.closest('.selectbox')
 		const parentVal = e.target.closest('.selectbox').children[0].children[1]
@@ -111,6 +113,19 @@ selectOptions.forEach(option => {
 	})
 })
 
+
+// js-like / js-dislike
+document.querySelector('.js-like').addEventListener('click', e => {
+	e.preventDefault()
+	document.querySelector('.discovery_card-react').classList.add('shown')
+	document.querySelector('.discovery_card-react').classList.remove('angry')
+})
+document.querySelector('.js-dislike').addEventListener('click', e => {
+	e.preventDefault()
+	document.querySelector('.discovery_card-react').classList.add('shown')
+	document.querySelector('.discovery_card-react').classList.remove('happy')
+	document.querySelector('.discovery_card-react').classList.add('angry')
+})
 
 
 
