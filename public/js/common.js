@@ -115,17 +115,23 @@ selectOptions.forEach(option => {
 
 
 // js-like / js-dislike
-document.querySelector('.js-like').addEventListener('click', e => {
-	e.preventDefault()
-	document.querySelector('.discovery_card-react').classList.add('shown')
-	document.querySelector('.discovery_card-react').classList.remove('angry')
-})
-document.querySelector('.js-dislike').addEventListener('click', e => {
-	e.preventDefault()
-	document.querySelector('.discovery_card-react').classList.add('shown')
-	document.querySelector('.discovery_card-react').classList.remove('happy')
-	document.querySelector('.discovery_card-react').classList.add('angry')
-})
+const likeBtn = document.querySelector('.js-like')
+const dislikeBtn = document.querySelector('.js-dislike')
+if (likeBtn) {
+	likeBtn.addEventListener('click', e => {
+		e.preventDefault()
+		document.querySelector('.discovery_card-react').classList.add('shown')
+		document.querySelector('.discovery_card-react').classList.remove('angry')
+	})
+}
+if (dislikeBtn) {
+	dislikeBtn.addEventListener('click', e => {
+		e.preventDefault()
+		document.querySelector('.discovery_card-react').classList.add('shown')
+		document.querySelector('.discovery_card-react').classList.remove('happy')
+		document.querySelector('.discovery_card-react').classList.add('angry')
+	})
+}
 
 
 

@@ -701,6 +701,20 @@ $circle: 1600px;
     &.shown {transform: scale(1); opacity: 1; visibility: visible;}
     &.angry {background-color: var(--color-red); background-image: url(../images/svg/monkey-angry.svg);}
   }
+
+  &-block {
+    background: #1a1a1c; border-radius: 8px; padding: 10px var(--gap); position: relative;
+    &.flexed {display: flex; align-items: center;}
+    small {font-size: 12px; line-height: 16px; margin-right: var(--gap);}
+    &.iconed {
+      &::after {
+        @include bf; background: url(../images/svg/arrow-green.svg) center center / 12px no-repeat;
+        width: 20px; height: 20px; transform: rotate(-45deg); left: var(--gap); top: 50%; margin-top: -10px;
+      }
+      &.down::after {background-image: url(../images/svg/arrow-red.svg); transform: rotate(45deg);}
+      &.mid::after {background-image: url(../images/svg/arrow-orange.svg); transform: rotate(0deg);}
+    }
+  }
 }
 
 

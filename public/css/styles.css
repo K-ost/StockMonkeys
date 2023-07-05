@@ -119,6 +119,10 @@ h3, .h3 {
   display: flex;
 }
 
+.d-block {
+  display: block;
+}
+
 .align-center {
   align-items: center;
 }
@@ -2514,4 +2518,39 @@ input[type=radio]:checked + .switcher-name {
 .discovery_card-react.angry {
   background-color: var(--color-red);
   background-image: url(../images/svg/monkey-angry.svg);
+}
+.discovery_card-block {
+  background: #1a1a1c;
+  border-radius: 8px;
+  padding: 10px var(--gap);
+  position: relative;
+}
+.discovery_card-block.flexed {
+  display: flex;
+  align-items: center;
+}
+.discovery_card-block small {
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: var(--gap);
+}
+.discovery_card-block.iconed::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(../images/svg/arrow-green.svg) center center/12px no-repeat;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  left: var(--gap);
+  top: 50%;
+  margin-top: -10px;
+}
+.discovery_card-block.iconed.down::after {
+  background-image: url(../images/svg/arrow-red.svg);
+  transform: rotate(45deg);
+}
+.discovery_card-block.iconed.mid::after {
+  background-image: url(../images/svg/arrow-orange.svg);
+  transform: rotate(0deg);
 }
