@@ -1,19 +1,44 @@
 @@include('inc/head.html', { "title": "Discovery" })
 
 <div class="mainbody">
-	@@include('inc/timehead.html')
-	<div class="mainbody-content">
+	@@include('inc/timehead.html', { "filter": true })
+	<div class="mainbody-content flex_column">
 		
-		<div class="wrapper">
+		<div class="wrapper flex_height">
 
 			<h3>Discovery page is going to be here soon</h3>
 
 		</div><!-- /wrapper -->
+
+		<div class="discovery_buttons">
+			<button class="discovery_buttons-btn discovery_buttons-prev"></button>
+			<button class="discovery_buttons-btn discovery_buttons-like"></button>
+			<button class="discovery_buttons-btn discovery_buttons-dislike"></button>
+			<button class="discovery_buttons-btn discovery_buttons-next"></button>
+		</div><!-- /discovery_buttons -->
 		
 	</div><!-- /mainbody-content -->
 	@@include('inc/navbar.html', { "discovery": true })
 </div><!-- /mainbody -->
 
-@@include('inc/fixbtns.html')
+
+<div class="modal" id="modal-filter">
+	<div class="modal-title">סינון מניות</div>
+	
+	<div class="form-line">
+		@@include('inc/select.html')
+	</div>
+	<div class="form-line">
+		@@include('inc/select.html')
+	</div>
+	<div class="form-line">
+		@@include('inc/select.html')
+	</div>
+
+	<div class="modal-btns">
+		<button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-yellow">סנן מניות</button>
+	</div>
+</div><!-- /modal -->
 
 @@include('inc/footer.html')

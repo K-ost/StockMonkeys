@@ -89,7 +89,7 @@ $loaderSize: 40px;
   &-star::before {@include icon(star,20px,20px);}
   &-star.active::before {background-image: url(../images/svg/star-yellow.svg);}
   &-heart::before {@include icon(heart,20px,20px);}
-  &-heart.active::before {background-image: url(../images/svg/heart-yellow.svg);}
+  &-heart.active::before {background-image: url(../images/svg/heart-o-yellow.svg);}
   &-bell::before {@include icon(bell,20px,20px);}
   &-bell.active::before {background-image: url(../images/svg/bell-yellow.svg);}
   &-briefcase::before {@include icon(briefcase,20px,20px);}
@@ -643,7 +643,23 @@ $circle: 1600px;
 }
 
 
-
+/* discovery_buttons */
+.discovery_buttons {
+  display: flex; padding: 8px var(--gap); align-items: center;
+  &-btn {
+    @include inp; width: 56px; height: 56px; border-radius: 50%;
+    cursor: pointer; background: rgba(255,198,26,0.24); background-position: center center;
+    background-repeat: no-repeat; background-size: 20px; border: 0;
+  }
+  &-prev, &-next {background-image: url(../images/svg/larr-yellow.svg);}
+  &-prev {transform: matrix(-1,0,0,1,0,0); margin-left: auto;}
+  &-next {margin-right: auto;}
+  &-like {background-color: var(--color-green); background-image: url(../images/svg/heart-o-black.svg);}
+  &-dislike {
+    background-color: var(--color-red); background-image: url(../images/svg/heart-crack.svg);
+    margin-right: var(--gap);
+  }
+}
 
 
 

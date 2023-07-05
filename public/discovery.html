@@ -21,15 +21,23 @@
 	<div class="fixheader appheader">
   <div class="appheader-time"><span id="js_time"></span> <em>|</em> <span id="js_date"></span></div>
   <a href="search.html" class="btn_icon btn_icon-search"></a>
-  <button class="btn_icon btn_icon-refresh"></button>
+  
+  <button class="btn_icon btn_icon-filter" data-fancybox data-src="#modal-filter"></button>
 </div><!-- /appheader -->
-	<div class="mainbody-content">
+	<div class="mainbody-content flex_column">
 		
-		<div class="wrapper">
+		<div class="wrapper flex_height">
 
 			<h3>Discovery page is going to be here soon</h3>
 
 		</div><!-- /wrapper -->
+
+		<div class="discovery_buttons">
+			<button class="discovery_buttons-btn discovery_buttons-prev"></button>
+			<button class="discovery_buttons-btn discovery_buttons-like"></button>
+			<button class="discovery_buttons-btn discovery_buttons-dislike"></button>
+			<button class="discovery_buttons-btn discovery_buttons-next"></button>
+		</div><!-- /discovery_buttons -->
 		
 	</div><!-- /mainbody-content -->
 	<div class="navbar">
@@ -44,16 +52,70 @@
 </div><!-- /navbar -->
 </div><!-- /mainbody -->
 
-<div class="fix_buttons">
-  <div class="fix_buttons-content">
-    
-      <button class="btn_fix btn_fix-hide btn_fix-plus"></button>
-      <button class="btn_fix btn_fix-hide btn_fix-chart"></button>
-    
-    
+
+<div class="modal" id="modal-filter">
+	<div class="modal-title">סינון מניות</div>
+	
+	<div class="form-line">
+		<div class="selectbox">
+  <a href="#" class="selectbox-header js-select">
+    <span class="selectbox-label">ניירות ערך</span>
+    <span class="selectbox-value">ללא סינון</span>
+  </a>
+  <div class="selectbox-dropdown">
+    <ul>
+      <li>מדדים מובילים</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
   </div>
-  <button class="btn_fix btn_fix-dots js-btn_fix"></button>
-</div><!-- /fix_buttons -->
+</div><!-- /selectbox -->
+	</div>
+	<div class="form-line">
+		<div class="selectbox">
+  <a href="#" class="selectbox-header js-select">
+    <span class="selectbox-label">ניירות ערך</span>
+    <span class="selectbox-value">ללא סינון</span>
+  </a>
+  <div class="selectbox-dropdown">
+    <ul>
+      <li>מדדים מובילים</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+  </div>
+</div><!-- /selectbox -->
+	</div>
+	<div class="form-line">
+		<div class="selectbox">
+  <a href="#" class="selectbox-header js-select">
+    <span class="selectbox-label">ניירות ערך</span>
+    <span class="selectbox-value">ללא סינון</span>
+  </a>
+  <div class="selectbox-dropdown">
+    <ul>
+      <li>מדדים מובילים</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+  </div>
+</div><!-- /selectbox -->
+	</div>
+
+	<div class="modal-btns">
+		<button class="btn btn-empty" data-fancybox-close>בטל</button>
+    <button class="btn btn-yellow">סנן מניות</button>
+	</div>
+</div><!-- /modal -->
 
 <div class="sidemenu">
   <div class="sidemenu_overlay"></div>

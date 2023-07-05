@@ -1,7 +1,8 @@
 
-// date creating
+// Generating of date and time
 const dateSpan = document.querySelector('#js_date')
 const timeSpan = document.querySelector('#js_time')
+
 const dateGot = new Date()
 const dateGotDay = ( dateGot.getDate() < 10 ) ? '0' + dateGot.getDate() : dateGot.getDate()
 const dateGotMonth = ( dateGot.getMonth() < 10 ) ? '0' + dateGot.getMonth() : dateGot.getMonth()
@@ -9,8 +10,13 @@ const dateGotHours = ( dateGot.getHours() < 10 ) ? '0' + dateGot.getHours() : da
 const dateGotMins = ( dateGot.getMinutes() < 10 ) ? '0' + dateGot.getMinutes() : dateGot.getMinutes()
 const dateString = `${dateGotDay}.${dateGotMonth}.${dateGot.getFullYear()}`
 const timeString = dateGotHours + ':' + dateGotMins
-dateSpan.innerText = dateString
-timeSpan.innerText = timeString
+
+if (dateSpan) {
+	dateSpan.innerText = dateString
+}
+if (timeSpan) {
+	timeSpan.innerText = timeString
+}
 
 
 // Swiper
@@ -84,5 +90,27 @@ Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 	dragToClose: false,
 })
+
+
+// Select
+const selects = document.querySelectorAll('.js-select')
+selects.forEach(select => {
+	select.addEventListener('click', e => {
+		const parent = e.target.closest('.selectbox')
+		parent.classList.toggle('opened')
+	})
+})
+const selectOptions = document.querySelectorAll('.selectbox-dropdown ul li')
+selectOptions.forEach(option => {
+	option.addEventListener('click', e => {
+		const text = e.target.innerText
+		const parent = e.target.closest('.selectbox')
+		const parentVal = e.target.closest('.selectbox').children[0].children[1]
+		parentVal.innerText = text
+		parent.classList.remove('opened')
+	})
+})
+
+
 
 

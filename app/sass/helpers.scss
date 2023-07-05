@@ -51,6 +51,7 @@ $grid: 16px;
 .d-flex {display: flex;}
 .align-center {align-items: center;}
 .justify-content-between {justify-content: space-between;}
+.justify-center {justify-content: center;}
 .row {
 	display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;
 	margin-left: -(calc($grid / 2)); margin-right: -(calc($grid / 2));
@@ -70,7 +71,6 @@ $grid: 16px;
 .margin_bottom2 {margin-bottom: 24px;}
 .margin_bottom3 {margin-bottom: 32px;}
 .flex_column {display: flex; flex-direction: column;}
-.justify-center {justify-content: center;}
 .flex_height {flex: 1;}
 hr {
 	background: var(--color-line); border: 0; clear: both; height: 1px;
@@ -282,6 +282,42 @@ input[type="radio"] {
 
 
 
+/* selectbox */
+.selectbox {
+	display: block; position: relative;
+	&-header {
+		background: var(--color-grey); border-radius: 8px; display: block;
+		padding: 12px var(--gap); position: relative; text-decoration: none;
+		&::after {
+			@include bf; @include icon(caret-white,12px,10px); left: var(--gap);
+			top: 50%; margin-top: -5px;
+		}
+	}
+	&-label {
+		display: block; color: rgba(255,255,255,0.6); font-size: 12px;
+		line-height: 16px; margin: 0 0 1px;
+	}
+	&-dropdown {
+		background: #454547; border-radius: 0 0 8px 8px; max-height: 200px;
+		position: absolute; left: 0; width: 100%; display: none; overflow: auto;
+		box-shadow: 0 2px 16px rgba(0,0,0,0.55);
+		ul {margin: 0; padding: 0;}
+		li {list-style: none; padding: var(--gap); transition: all 200ms ease-in-out; cursor: pointer;}
+		li:active {background: var(--color-grey);}
+	}
+	&.opened {z-index: 100;}
+	&.opened &-header {
+		border-radius: 8px 8px 0 0; box-shadow: inset 0 0 0 2px var(--color-yellow);
+		&::after {
+			background-image: url(../images/svg/caret-yellow.svg);
+			transform: matrix(1,0,0,-1,0,0);
+		}
+	}
+	&.opened &-dropdown {display: block;}
+}
+
+
+
 /* carets */
 .caret-down, .caret-up {@include icon(caret,16px,14px);}
 .caret-up {background-image: url(../images/svg/caret-green.svg); transform: matrix(1,0,0,-1,0,0);}
@@ -399,6 +435,7 @@ $btn_fix_height: 56px;
 		&.full .btn {flex: 1;}
 	}
 }
+
 
 
 
