@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    @@if(!context.type3){
+    @@if(context.chart){
     <div class="discovery_card-chart">
       <img src="images/uploads/chart2.webp" alt="">
     </div>
@@ -64,7 +64,46 @@
       @@include('discovery-list.html', { "icon": "dollar", "val": "24.13" })
       @@include('discovery-list.html', { "icon": "exclamation", "val": "-0.42", "color": "color-red" })
     </div><!-- /discovery_wrap -->
+    <div class="wrapper">
+      <div class="margin_bottom font-bold">תשואה</div>
+      <div class="row">
+        <div class="grid4">
+          <div class="discovery_sm">
+            <div class="discovery_sm-title">חודשים 3</div>
+            <span class="color-green">9.12%</span>
+          </div>
+        </div>
+        <div class="grid4">
+          <div class="discovery_sm">
+            <div class="discovery_sm-title">חודשים 3</div>
+            <span class="color-green">2.41%</span>
+          </div>
+        </div>
+        <div class="grid4">
+          <div class="discovery_sm">
+            <div class="discovery_sm-title">חודשים 3</div>
+            <span class="color-red">-9.12%</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /wrapper -->
     <div class="discovery_card-bottom text-center">קרא עוד</div>
+    }
+
+    @@if(context.type4){
+    <div class="discovery_card-foot">
+      <div class="wrapper">
+        <div class="font-bold">איתות קניה</div>
+        <div class="discovery_card-text margin_bottom">שבירת רצף יורד בגרף השבועי בעוד שהמגמה החודשית והשבועית נמצאת בעלייה</div>
+        <div class="font-bold margin_bottom">נתוני עסקה</div>
+      </div><!-- /wrapper -->
+      <div class="discovery_line-wrap">
+        @@include('discovery-line.html')
+        @@include('discovery-line.html')
+        @@include('discovery-line.html')
+        @@include('discovery-line.html')
+      </div><!-- /discovery_line-wrap -->
+    </div><!-- /discovery_card-foot -->
     }
   </div>
 </div><!-- /discovery-card -->

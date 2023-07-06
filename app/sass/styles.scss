@@ -683,6 +683,7 @@ $circle: 1600px;
     img {display: block; width: 100%;}
   }
   &-top, &-bottom {padding: var(--gap);}
+  &-foot {padding-bottom: 24px;}
   .first_screen-meta {text-align: right; margin: 0 0 5px;}
   .first_screen-info {justify-content: flex-start; font-size: 24px; line-height: 28px;}
   .colors_pick {margin: 0;}
@@ -692,6 +693,7 @@ $circle: 1600px;
     text-align: center;
   }
   .btn_icon-info {position: absolute; left: 8px; top: 8px;}
+  &-text {font-size: 14px; line-height: 21px;}
 
   &-react {
     background: var(--color-green) url(../images/svg/monkey-happy.svg) center center /145px no-repeat;
@@ -720,7 +722,8 @@ $circle: 1600px;
 
 /* discovery_list */
 .discovery_wrap {
-  overflow: auto; max-height: 218px;
+  overflow: auto; max-height: 218px; margin-bottom: 24px;
+  &:last-child {margin-bottom: 0;}
   .discovery_list:nth-child(even) {background: #1a1a1c;}
 }
 .discovery_list {
@@ -743,5 +746,20 @@ $circle: 1600px;
 }
 
 
+/* discovery_line */
+.discovery_line {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 40px; padding: 8px var(--gap);
+  &:nth-child(even) {background: #1a1a1c;}
+  &-val {margin-right: var(--gap); font-size: 20px; font-weight: 700; line-height: 24px;}
+}
+
+
+/* discovery_sm */
+.discovery_sm {
+  background: #1a1a1c; border-radius: 8px; padding: var(--gap); text-align: center;
+  &-title {font-size: 14px; line-height: 16px; margin: 0 0 7px;}
+  span {font-weight: 700;}
+}
 
 

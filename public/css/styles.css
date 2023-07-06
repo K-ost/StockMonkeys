@@ -2466,6 +2466,9 @@ input[type=radio]:checked + .switcher-name {
 .discovery_card-top, .discovery_card-bottom {
   padding: var(--gap);
 }
+.discovery_card-foot {
+  padding-bottom: 24px;
+}
 .discovery_card .first_screen-meta {
   text-align: right;
   margin: 0 0 5px;
@@ -2495,6 +2498,10 @@ input[type=radio]:checked + .switcher-name {
   position: absolute;
   left: 8px;
   top: 8px;
+}
+.discovery_card-text {
+  font-size: 14px;
+  line-height: 21px;
 }
 .discovery_card-react {
   background: var(--color-green) url(../images/svg/monkey-happy.svg) center center/145px no-repeat;
@@ -2559,6 +2566,10 @@ input[type=radio]:checked + .switcher-name {
 .discovery_wrap {
   overflow: auto;
   max-height: 218px;
+  margin-bottom: 24px;
+}
+.discovery_wrap:last-child {
+  margin-bottom: 0;
 }
 .discovery_wrap .discovery_list:nth-child(even) {
   background: #1a1a1c;
@@ -2608,4 +2619,38 @@ input[type=radio]:checked + .switcher-name {
 }
 .discovery_list-icon.check {
   background-image: url(../images/svg/check.svg);
+}
+
+/* discovery_line */
+.discovery_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 8px var(--gap);
+}
+.discovery_line:nth-child(even) {
+  background: #1a1a1c;
+}
+.discovery_line-val {
+  margin-right: var(--gap);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* discovery_sm */
+.discovery_sm {
+  background: #1a1a1c;
+  border-radius: 8px;
+  padding: var(--gap);
+  text-align: center;
+}
+.discovery_sm-title {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 7px;
+}
+.discovery_sm span {
+  font-weight: 700;
 }
