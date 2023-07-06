@@ -2,5 +2,5 @@
   @@for(var i = 0; i < list.length; i++) {
   <li><a href="#" class="` + list[i].class + `">` + list[i].title + `</a></li>
   }
-  @@if(context.filter){<li class="segments-filter"><a href="#"></a></li>}
+  @@if(context.filter){<li class="segments-filter"><a href="#" data-fancybox data-src="#alerts-filter"></a></li>}
 </ul><!-- /segments -->
