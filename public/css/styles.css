@@ -2554,3 +2554,58 @@ input[type=radio]:checked + .switcher-name {
   background-image: url(../images/svg/arrow-orange.svg);
   transform: rotate(0deg);
 }
+
+/* discovery_list */
+.discovery_wrap {
+  overflow: auto;
+  max-height: 218px;
+}
+.discovery_wrap .discovery_list:nth-child(even) {
+  background: #1a1a1c;
+}
+
+.discovery_list {
+  display: flex;
+  align-items: center;
+  padding: 10px var(--gap);
+}
+.discovery_list-right {
+  min-width: 100px;
+  max-width: 100px;
+}
+.discovery_list-left {
+  min-width: 48px;
+  max-width: 48px;
+  text-align: left;
+}
+.discovery_list-title {
+  margin: 0 0 3px;
+}
+.discovery_list-val {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.discovery_list-text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+.discovery_list-icon {
+  background-color: var(--color-green);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/svg/dollar.svg);
+}
+.discovery_list-icon.exclamation {
+  background-image: url(../images/svg/exclamation.svg);
+  background-color: var(--color-red);
+}
+.discovery_list-icon.check {
+  background-image: url(../images/svg/check.svg);
+}

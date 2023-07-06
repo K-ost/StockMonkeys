@@ -14,9 +14,13 @@
         <span class="color-green">2.36%- <span class="caret-up"></span></span>
       </div>
     </div>
+
+    @@if(!context.type3){
     <div class="discovery_card-chart">
       <img src="images/uploads/chart2.webp" alt="">
     </div>
+    }
+
     @@if(context.type1){
     <div class="discovery_card-bottom">
       <div class="discovery_card-title2">גרף שבועי</div>
@@ -45,6 +49,22 @@
     </div>
     }
 
-    
+    @@if(context.type3){
+    <div class="wrapper">
+      <div class="margin_bottom font-bold">פיננסי</div>
+    </div>
+    <div class="discovery_wrap">
+      @@include('discovery-list.html', { "val": "7,792" })
+      @@include('discovery-list.html', { "icon": "dollar", "val": "24.13" })
+      @@include('discovery-list.html', { "icon": "exclamation", "val": "-0.42", "color": "color-red" })
+      @@include('discovery-list.html', { "val": "7,792" })
+      @@include('discovery-list.html', { "icon": "check", "val": "24.13" })
+      @@include('discovery-list.html', { "icon": "exclamation", "val": "-0.42", "color": "color-red" })
+      @@include('discovery-list.html', { "val": "7,792" })
+      @@include('discovery-list.html', { "icon": "dollar", "val": "24.13" })
+      @@include('discovery-list.html', { "icon": "exclamation", "val": "-0.42", "color": "color-red" })
+    </div><!-- /discovery_wrap -->
+    <div class="discovery_card-bottom text-center">קרא עוד</div>
+    }
   </div>
 </div><!-- /discovery-card -->

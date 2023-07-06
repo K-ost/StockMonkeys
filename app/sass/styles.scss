@@ -718,4 +718,30 @@ $circle: 1600px;
 }
 
 
+/* discovery_list */
+.discovery_wrap {
+  overflow: auto; max-height: 218px;
+  .discovery_list:nth-child(even) {background: #1a1a1c;}
+}
+.discovery_list {
+  display: flex; align-items: center; padding: 10px var(--gap);
+  &-right {min-width: 100px; max-width: 100px;}
+  &-left {min-width: 48px; max-width: 48px; text-align: left;}
+  &-title {margin: 0 0 3px;}
+  &-val {font-size: 24px; line-height: 28px; font-weight: 700;}
+  &-text {font-size: 12px; line-height: 16px; text-align: left;}
+  &-icon {
+    background-color: var(--color-green); background-position: center center;
+    background-repeat: no-repeat; background-size: 16px 16px; border-radius: 8px; display: inline-block;
+    width: 32px; height: 32px; background-image: url(../images/svg/dollar.svg);
+    &.exclamation {
+      background-image: url(../images/svg/exclamation.svg);
+      background-color: var(--color-red);
+    }
+    &.check {background-image: url(../images/svg/check.svg);}
+  }
+}
+
+
+
 
