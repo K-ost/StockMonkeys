@@ -372,11 +372,18 @@ $loaderSize: 40px;
   }
   &_body {
     background: #313234;
-    width: 100%; max-width: 304px;
+    width: 100%;
+    max-width: 304px;
     position: absolute; right: 0; top: 0; bottom: 0;
     transition: all 200ms ease-in-out;
     transform: translateX(400px);
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+  &-bottom {
+    flex-grow: 1;
+    overflow: auto;
   }
   &-card {
     background: var(--color-yellow); padding: 36px var(--gap); color: var(--color-black);
